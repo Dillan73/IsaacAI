@@ -1,0 +1,12 @@
+def save_question_to_file(filename="questions.txt"):
+    with open(filename, "a") as file:
+        while True:
+            question = input("Enter a question (or type 'exit' to quit): ")
+            if question.lower() == "exit":
+                break
+            answer = input("Enter the answer: ")
+            file.write(f"Q: {question}\nA: {answer}\n\n")
+            print("Question saved!\n")
+
+if __name__ == "__main__":
+    save_question_to_file()
